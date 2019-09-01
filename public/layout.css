@@ -2,7 +2,6 @@
     background-color: #08A4A7;
     }
     #navbar2{
-        height: 65px;
     background: #AFEEEE;
     
     }
@@ -24,42 +23,37 @@
     }
     #i1{
         color:#FFFFFF;
+
     }
     #btn2{
         width: 150px;
-    height: 45px;
-    margin-left: 75px;
+
     color:#FFFFFF;
     background: #006969;
     }
     #btn3{
         width: 150px;
-    height: 45px;
-    margin-left: 15px; 
     color:#FFFFFF;
+    
     background: #f96969
     }
     #btn4{
         width: 150px;
-    height: 45px;
-    margin-left: 15px;
     color:#FFFFFF;
+
     background: #006969;
     }
    
-    #btn7{
-        width: 50px;
-    height:55px;
-    margin-left:860px;
-    font-size:30px;
+    #btn5{
     background-color:#f96969;
     color:#FFFFFF;
+    font-size:20px;
     
     }
-    #btn8{
+    #btn6{
         width: 50px;
     height:55px;
-    font-size:30px;
+    font-size:20px;
     background-color:#f96969;
     
     }
@@ -68,4 +62,4 @@
        height:50px;
 
     }
-    
+   

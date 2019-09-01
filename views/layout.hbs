@@ -10,7 +10,7 @@
 <body>
     <header class="fixed-top">
         <div class="container-fluid"style="padding:0;">
-      <nav class="navbar" id="navbar1">
+      <nav class="navbar " id="navbar1">
           <a class="navbar-brand" href="#">
           <img src="../webtubelogo.png" class="d-inline-block align-top" alt="">
   <span>webTube</span></a>
@@ -22,24 +22,30 @@
      <button  class="btn btn-lg "type="submit" id=btn1><i class="fa fa-search" id="i1"></i></button>
      </div></div>
      </form>
-      <button class=" btn rounded-circle" id=btn8></button>
+      <button class=" btn rounded-circle ml-auto" id="btn6"></button>
     
     
 </nav>
-    </div>
-</nav>  
-<nav class="navbar" id="navbar2">
     
-    
+
+{{!-- <nav class="navbar navbar expand-lg" id="navbar2">
         <button type="button" class="btn" id="btn2">HOME</button>
         <button type="button" class="btn "id="btn3">TRENDING</button>
         <button type="button" class="btn"id="btn4">PROFILE</button>
       
-        
        <button class=" btn rounded-circle " id="btn7"> <i class="fa fa-sign-out" aria-hidden="true" id="i2"></i></button>
-</nav>
+</nav> --}}
+<div class="nav-scroller shadow-sm " id="navbar2">
+  <nav class="nav nav-underline">
+    <a class="nav-link " href="#"> <button type="button" class="btn" id="btn2">HOME</button></a>
+    <a class="nav-link" href="#"><button type="button" class="btn "id="btn3">TRENDING</button></a>
+    <a class="nav-link" href="#"><button type="button" class="btn"id="btn4">PROFILE</button></a>
+
+ <a class="nav-link ml-auto" href="#"> <button class=" btn rounded-circle " id="btn5"> <i class="fa fa-sign-out" aria-hidden="true" id="i2"></i></button></a></li></nav>
+  </nav>
+</div>
 </header>
-<div style="margin-top:140px;">
+<div style="margin-top:140px;"></div>
 {{{body}}}
 </body>
 </head>
