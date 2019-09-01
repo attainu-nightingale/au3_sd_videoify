@@ -9,19 +9,24 @@
 </head>
 <body>
     <header class="fixed-top">
+        <div class="container-fluid"style="padding:0;">
       <nav class="navbar" id="navbar1">
           <a class="navbar-brand" href="#">
           <img src="../webtubelogo.png" class="d-inline-block align-top" alt="">
   <span>webTube</span></a>
   
-  <form  id="form1"class="form-inline">
-      <input class="form-control form-control-lg" id="input1" type="search" placeholder="Search" aria-label="Search" style="width:900px;">
-     <button  class="btn btn-lg "type="submit" id=btn1><i class="fa fa-search" id="i1"></i></button></form>
+  <form  id="form1"class="form">
+      <div class="input-group">
+      <input class="form-control form-control-lg form-expand-lg" id="input1" type="search" placeholder="Search" aria-label="Search" style="900px;">
+      <div class="input-group-append">
+     <button  class="btn btn-lg "type="submit" id=btn1><i class="fa fa-search" id="i1"></i></button>
+     </div></div>
+     </form>
       <button class=" btn rounded-circle" id=btn8></button>
     
     
 </nav>
-    
+    </div>
 </nav>  
 <nav class="navbar" id="navbar2">
     
@@ -29,15 +34,12 @@
         <button type="button" class="btn" id="btn2">HOME</button>
         <button type="button" class="btn "id="btn3">TRENDING</button>
         <button type="button" class="btn"id="btn4">PROFILE</button>
-        {{!-- <button type="button" class="btn"id=btn5>NEWS</button>
-        <button type="button" class="btn"id=btn6>CRICKET</button> --}}
-        
-        
+      
         
        <button class=" btn rounded-circle " id="btn7"> <i class="fa fa-sign-out" aria-hidden="true" id="i2"></i></button>
 </nav>
 </header>
-<div style="margin-top:140px;"></div>
+<div style="margin-top:140px;">
 {{{body}}}
 </body>
 </head>
