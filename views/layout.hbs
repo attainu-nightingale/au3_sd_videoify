@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../layout.css">
+    <link rel="stylesheet" href="../{{style}}">
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav id="navbar1" class="navbar justify-content-between">
+
+            <a class="navbar-brand" href="#">
+                <img src="../webtubelogo.png" width="50" height="40" class="d-inline-block" alt="">
+                <h3 class="d-inline align-middle text-white ml-3">webTube</h3>
+            </a>
+
+            <form class="form-inline">
+                 <div class="input-group">
+                <input id="navBarSearchForm" class="form-control" type="search"
+                    placeholder="Search here..." aria-label="Search here...">
+                     <div class="input-group-append">
+                <button type="submit" class="btn " id="btn1"><img id="searchicon" src="../searchicon.png" height="25"
+                        width="25"></button>
+                        </div></div>
+            </form>
+
+            <a class="" href="#">
+                <img src="../profile.png" width="45" height="45" class="d-inline-block" alt="">
+            </a>
+
+        </nav>
+
+        <nav id="navbar2" class="navbar ">
+            <form class="form-inline">
+                <button class="btn catbtn" type="button">HOME</button>
+                <button class="btn ml-3 trendbtn" type="button">TRENDING</button>
+                <button class="btn ml-3 catbtn" type="button">MOVIES</button>
+            </form>
+        </nav>
+
+    </header>
+    <div style="margin-top:110px;"></div>
+    {{{body}}}
+</body>
+</head>
+
+</html>
