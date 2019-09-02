@@ -1,53 +1,50 @@
 <!DOCTYPE html>
+
 <head>
     <title>{{title}}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="../{{style}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header class="fixed-top">
-        <div class="container-fluid"style="padding:0;">
-      <nav class="navbar " id="navbar1">
-          <a class="navbar-brand" href="#">
-          <img src="../webtubelogo.png" class="d-inline-block align-top" alt="">
-  <span>webTube</span></a>
-  
-  <form  id="form1"class="form">
-      <div class="input-group">
-      <input class="form-control form-control-lg form-expand-lg" id="input1" type="search" placeholder="Search" aria-label="Search" style="width:900px;">
-      <div class="input-group-append">
-     <button  class="btn btn-lg "type="submit" id=btn1><i class="fa fa-search" id="i1"></i></button>
-     </div></div>
-     </form>
-      <button class=" btn rounded-circle ml-auto" id="btn6"></button>
-    
-    
-</nav>
-    
+        <nav id="navbar1" class="navbar justify-content-between">
 
-{{!-- <nav class="navbar navbar expand-lg" id="navbar2">
-        <button type="button" class="btn" id="btn2">HOME</button>
-        <button type="button" class="btn "id="btn3">TRENDING</button>
-        <button type="button" class="btn"id="btn4">PROFILE</button>
-      
-       <button class=" btn rounded-circle " id="btn7"> <i class="fa fa-sign-out" aria-hidden="true" id="i2"></i></button>
-</nav> --}}
-<div class="nav-scroller shadow-sm " id="navbar2">
-  <nav class="nav nav-underline">
-    <a class="nav-link " href="#"> <button type="button" class="btn" id="btn2">HOME</button></a>
-    <a class="nav-link" href="#"><button type="button" class="btn "id="btn3">TRENDING</button></a>
-    <a class="nav-link" href="#"><button type="button" class="btn"id="btn4">PROFILE</button></a>
+            <a class="navbar-brand" href="#">
+                <img src="../webtubelogo.png" width="50" height="40" class="d-inline-block" alt="">
+                <h3 class="d-inline align-middle text-white ml-3">webTube</h3>
+            </a>
 
- <a class="nav-link ml-auto" href="#"> <button class=" btn rounded-circle " id="btn5"> <i class="fa fa-sign-out" aria-hidden="true" id="i2"></i></button></a></li></nav>
-  </nav>
-</div>
-</header>
-<div style="margin-top:140px;"></div>
-{{{body}}}
+            <form class="form-inline">
+                 <div class="input-group">
+                <input id="navBarSearchForm" class="form-control" type="search"
+                    placeholder="Search here..." aria-label="Search here...">
+                     <div class="input-group-append">
+                <button type="submit" class="btn " id="btn1"><img id="searchicon" src="../searchicon.png" height="25"
+                        width="25"></button>
+                        </div></div>
+            </form>
+
+            <a class="" href="#">
+                <img src="../profile.png" width="45" height="45" class="d-inline-block" alt="">
+            </a>
+
+        </nav>
+
+        <nav id="navbar2" class="navbar ">
+            <form class="form-inline">
+                <button class="btn catbtn" type="button">HOME</button>
+                <button class="btn ml-3 trendbtn" type="button">TRENDING</button>
+                <button class="btn ml-3 catbtn" type="button">MOVIES</button>
+            </form>
+        </nav>
+
+    </header>
+    <div style="margin-top:110px;"></div>
+    {{{body}}}
 </body>
 </head>
+
 </html>
-    
