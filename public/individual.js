@@ -50,4 +50,37 @@ var obj = {"video": {
  
     counter.innerHTML++;
  });
+// $('btn2').on('click',function(){
+//  var data={
+//      comment:$('#text').val()}
+//      $.ajax({
+//         url: "/video/id",
+//         type: 'post',
+//         data: JSON.stringify(data),
+//         dataType: "json",
+//         contentType: "application/json",
+//         success: function(data) {
+//             // getData();
+//         $('#comment').append(data.comment);
+//      }
+//     })
+// })
+w("#btn2").on("click",function(){
+    $.ajax({
+        url: "/video/id",
+        data: $('#text').serialize(),
+        type: 'POST',
+        success: function(data){
+            $('#comment').append(data);
+            window.location = "/video/id";
+           },
+           error: function(xhr, type, exception) { 
+             // if ajax fails display error alert
+             alert("ajax error response type "+type);
+           }
+    })
+    
+});
+
+ 
   

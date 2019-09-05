@@ -1,5 +1,6 @@
 var express=require('express');
 var app=express();
+app.use(express.urlencoded());
 var hbs = require('hbs');
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
@@ -31,8 +32,16 @@ app.get('/trending',function(req,res){
 app.get('/video/:id',function(req,res){
     res.render('individual.hbs',{
             title:'INDIVIDUAL PAGE',
-            style:'individual.css'
+            style:'individual.css',
+            script:'../individual.js'
+            
         })
 });
+
+app.post('/video/:id',function(req,res){
+    res.redirect('/video/:id')
+            
+        })
+
 
 app.listen(3000);
