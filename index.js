@@ -54,10 +54,7 @@ app.get('/video/:id',function(req,res){
         
 });
 
-app.post('/video/:id',function(req,res){
-    res.redirect('/video/:id')
-            
-        })
+
 
 
 app.listen(3000);
