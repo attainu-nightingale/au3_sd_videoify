@@ -1,5 +1,6 @@
 var express=require('express');
 var app=express();
+app.use(express.urlencoded());
 var hbs = require('hbs');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded());
@@ -52,5 +53,11 @@ app.get('/video/:id',function(req,res){
                 })
         
 });
+
+app.post('/video/:id',function(req,res){
+    res.redirect('/video/:id')
+            
+        })
+
 
 app.listen(3000);

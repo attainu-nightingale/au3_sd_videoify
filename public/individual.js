@@ -48,14 +48,14 @@ counter.innerHTML = 0;
 $('#btn').on('click',function(){
    counter.innerHTML++;
 });
-document.getElementById("video_id").value =video_id;
+
 $("#btn2").on("click",function(){
    $.ajax({
        url: "/video/:id",
        data: $('#text').serialize(),
        type: 'POST',
        success: function(data){
-           $('#comment').append("<span>"+jsonParse(data.comment)+"</span>");
+           $('#comment').append("<span>"+jsonParse(data)+"</span>");
            window.location = "/video/:id";
           },
           error: function(xhr, type, exception) {
