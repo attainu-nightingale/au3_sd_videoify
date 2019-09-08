@@ -42,6 +42,13 @@ app.get('/trending',function(req,res){
         })
 });
 
+app.get('/movies',function(req,res){
+    res.render('trending.hbs',{
+        title:'MOVIES',
+        style:'movies.css'
+    })
+});
+
 app.get('/video/:id',function(req,res){
     res.render('individual.hbs',{
             title:'INDIVIDUAL PAGE',
