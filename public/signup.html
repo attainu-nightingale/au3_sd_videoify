@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="text-center">
+    <form class="form-signin border rounded">
+        <img class="mb-4" src="./webtube logo.png" alt="" width="100" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Sign Up-</h1>
+        <div class="form-row">
+            <div class="form-group col">
+                <input type="text" id="fname" class="form-control rounded-pill" placeholder="First Name" required
+                    autofocus>
+            </div>
+            <div class="form-group col">
+                <input type="text" id="lname" class="form-control rounded-pill" placeholder="Last Name" required
+                    autofocus>
+            </div>
+        </div>
+        <div>
+            <select class="form-control rounded-pill">
+                <option>Choose Gender...</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="User name" class="sr-only">User Name</label>
+            <input type="text" id="uname" class="form-control rounded-pill" placeholder="User name" required autofocus>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="password" class="form-control rounded-pill" placeholder="Password" required>
+            </div>
+            <div class="form-group col">
+                <label for="inputPassword" class="sr-only">Confirm Password</label>
+                <input type="password" id="cpassword" class="form-control rounded-pill" placeholder="Confirm Password"
+                    required>
+            </div>
+        </div>
+        <div>
+            <label for="Security Question" class="sr-only">Security Question</label>
+            <input type="text" id="qn" class="form-control rounded-pill" placeholder="Choose Security Question" required
+                autofocus>
+        </div>
+        <div>
+            <label for="Answer" class="sr-only">Answer</label>
+            <input type="text" id="ans" class="form-control rounded-pill" placeholder="Answer" required autofocus>
+        </div>
+        <div>
+            <button class="btn btn-lg btn-primary btn-block rounded-pill" style="background-color: #5cb85c;font-family: Oswald" type="submit">Sign Up</button>
+        </div>
+    </form>
+</body>
+
+</html>
