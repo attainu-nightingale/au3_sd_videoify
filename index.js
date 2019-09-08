@@ -1,24 +1,12 @@
 var express=require('express');
+var auth= require('./authrouter');
 var app=express();
 
-app.get('/',function(req,res){
-    res.send("LOGIN PAGE")
-});
+app.use('/authrouter', auth);
+app.use(express.static("public"));
 
-app.get('/home',function(req,res){
-    res.send("HOME")
-});
-
-app.get('/profile',function(req,res){
-    res.send("PROFILE")
-});
-
-app.get('/trending',function(req,res){
-    res.send("TRENDING")
-});
-
-app.get('/video/:id',function(req,res){
-    res.send("INDIVIDUAL VIDEO PAGE")
+app.get("/",function(req,res){
+    res.sendFile(__dirname + "/public/login.html")
 });
 
 app.listen(8080);
