@@ -1,0 +1,28 @@
+#navbar1{
+    background-color: #08A4A7;
+    }
+
+#navbar2{
+        background-color: #AFEEEE ;
+    }
+.catbtn {
+    background-color: #006969 ;
+    color: white; 
+}    
+
+.trendbtn {
+    background-color: #F96969;
+    color: white; 
+}   
+#navBarSearchForm {
+    width:650px !important;
+    height:50px !important;
+    font-size: 30px;
+}
+#searchicon{
+    -webkit-filter: invert(100%);
+    
+}
+#btn1{
+   background-color:  #006969;
+}
