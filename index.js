@@ -1,4 +1,5 @@
 var express=require('express');
+var auth= require('./authrouter');
 var app=express();
 app.use(express.urlencoded());
 var hbs = require('hbs');
@@ -6,7 +7,6 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded());
 var mongoClient= require('mongodb').MongoClient;
 var url ='mongodb://127.0.0.1:27017';
-
 var db;
 mongoClient.connect(url,function(err,client){
     if(err)
@@ -15,6 +15,8 @@ mongoClient.connect(url,function(err,client){
 })
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
+app.use('/authrouter', auth);
+
 app.get('/',function(req,res){
     res.sendFile(__dirname+'/public/login.html')
 });
@@ -51,7 +53,6 @@ app.get('/video/:id',function(req,res){
             console.log(req.body);
             res.redirect('/video/:id')
                 })
-        
 });
 
 
