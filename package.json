@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/attainu-nightingale/au3_sd_videoify#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express-session": "^1.16.2",
     "express": "^4.17.1",
     "hbs": "^4.0.4",
     "mongodb": "^3.3.2",
