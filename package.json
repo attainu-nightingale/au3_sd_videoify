@@ -19,6 +19,8 @@
   "homepage": "https://github.com/attainu-nightingale/au3_sd_videoify#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.0.4"
+    "hbs": "^4.0.4",
+    "mongodb": "^3.3.2",
+    "npm": "^6.11.3"
   }
 }
