@@ -33,11 +33,20 @@ app.get('/profile', function (req, res) {
     })
 });
 
-app.get('/trending', function (req, res) {
-    res.render('trending.hbs', {
-        title: 'TRENDING',
-        style: 'trending.css'
-    })
+app.get('/trending',function(req,res){
+        res.render('trending.hbs',{
+            title:'TRENDING',
+            style:'trending.css',
+            script: "/trending.js"
+        })
+});
+
+app.get('/movies',function(req,res){
+    res.render('movies.hbs',{
+        title:'MOVIES',
+        style:'movies.css',
+        script: "/movies.js"
+    });
 });
 
 app.get('/video/:id', function (req, res) {
@@ -49,9 +58,9 @@ app.get('/video/:id', function (req, res) {
         script: '../individual.js',
         videoID: videoID,
         userName: "anjali"
-
-    })
+    });
 });
+
 
 app.post('/postComment', function (req, res) {
 
