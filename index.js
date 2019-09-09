@@ -24,14 +24,17 @@ app.get('/profile',function(req,res){
 app.get('/trending',function(req,res){
         res.render('trending.hbs',{
             title:'TRENDING',
-            style:'trending.css'
+            style:'trending.css',
+            script: "/trending.js"
+
         })
 });
 
 app.get('/movies',function(req,res){
-    res.render('trending.hbs',{
+    res.render('movies.hbs',{
         title:'MOVIES',
-        style:'movies.css'
+        style:'movies.css',
+        script: "/movies.js"
     })
 });
 
