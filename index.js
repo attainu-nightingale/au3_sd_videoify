@@ -1,4 +1,5 @@
 var express = require('express');
+var profile = require('./profileRouter');
 var auth= require('./authrouter');
 var individual=require('./individualrouter');
 var app = express();
@@ -19,6 +20,7 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 app.use('/authrouter', auth);
+
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/login.html')
 });
@@ -29,6 +31,8 @@ app.get('/home', function (req, res) {
         style: 'home.css'
     })
 });
+
+app.use('/profile', profile)
 
 app.get('/profile', function (req, res) {
     res.render('profile.hbs', {
