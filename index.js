@@ -1,4 +1,5 @@
 var express = require('express');
+var auth= require('./authrouter');
 var individual=require('./individualrouter');
 var app = express();
 app.use(express.urlencoded());
@@ -17,7 +18,7 @@ mongoClient.connect(url, function (err, client) {
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
-
+app.use('/authrouter', auth);
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/login.html')
 });
