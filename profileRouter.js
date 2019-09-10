@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
 
     //var userName:req.session.userName;
 
-    db.collection('loginData').find({ userName: "anjali" }).toArray(function (error, result) {
+    db.collection('loginData').find({ userName: "userName*" }).toArray(function (error, result) {
         if (error) throw error
         if (result[0].gender == "male")
             var profilepic = "../profileMale.png";
@@ -27,7 +27,7 @@ router.get('/', function (req, res) {
             title: 'PROFILE',
             style: 'profile.css',
             script: 'profile.js',
-            userName: "anjali kri",
+            userName: "userName*",
             profilepic: profilepic
         })
     })
@@ -92,7 +92,7 @@ router.get('/deleteProfile/:userName', function (req, res) {
     db.collection('loginData').deleteOne({ userName: userName }, function (error, result) {
         if (error)
             throw error
-        res.redirect('/');
+        res.redirect('/home');
     })
 });
 
