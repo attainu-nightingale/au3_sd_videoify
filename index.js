@@ -34,13 +34,6 @@ app.get('/home', function (req, res) {
 
 app.use('/profile', profile)
 
-app.get('/profile', function (req, res) {
-    res.render('profile.hbs', {
-        title: 'PROFILE',
-        style: 'profile.css'
-    })
-});
-
 app.get('/trending',function(req,res){
         res.render('trending.hbs',{
             title:'TRENDING',
