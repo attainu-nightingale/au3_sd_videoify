@@ -24,7 +24,7 @@ $.ajax({
    success: function (data) {
       for (i = 0; i < data.items.length; i++) {
          $('#div3').append("<div class='card mb-5 p-2'>" +
-            "<a href='/video/" + data.items[i].id.videoId + "'" + "><img src=" + data.items[i].snippet.thumbnails.high.url + " class='card-img img-thumbnail'>" +
+            "<a href='/individual/video/" + data.items[i].id.videoId + "'" + "><img src=" + data.items[i].snippet.thumbnails.high.url + " class='card-img img-thumbnail'>" +
             "<div class='card-body p-1 mt-2'> <p class='card-text'>" + data.items[i].snippet.title + "</p></a>" +
             "</div>" +
             "</div>")
@@ -34,7 +34,7 @@ $.ajax({
 
 //for getting comments
 $.ajax({
-   url: "/getComments/" + video_id,
+   url: "/individual/getComments/" + video_id,
    dataType: "json",
    type: 'GET',
    data: "json",
@@ -58,7 +58,7 @@ $.ajax({
 
 //for geting likes
 $.ajax({
-   url: "/getLikes/" + video_id,
+   url: "/individual/getLikes/" + video_id,
    dataType: "json",
    type: 'GET',
    data: "json",
@@ -70,7 +70,7 @@ $.ajax({
 //like btn click
 $('#btn-like').on('click', function () {
    $.ajax({
-      url: "/getLikes/" + video_id,
+      url: "/individual/getLikes/" + video_id,
       dataType: "json",
       type: 'GET',
       data: "json",
@@ -83,7 +83,7 @@ $('#btn-like').on('click', function () {
 
             $.ajax({
                type: "post",
-               url: "/pushUserName/" + user_Name + "/" + video_id,
+               url: "/individual/pushUserName/" + user_Name + "/" + video_id,
                contentType: 'application/json',
                dataType: "json",
                data: JSON.stringify(data),
@@ -107,7 +107,7 @@ $('#btn-like').on('click', function () {
                $("#btn-like").addClass("disabled");
                $.ajax({
                   type: "post",
-                  url: "/pushUserName/" + user_Name + "/" + video_id,
+                  url: "/individual/pushUserName/" + user_Name + "/" + video_id,
                   contentType: 'application/json',
                   dataType: "json",
                   data: JSON.stringify(data),
