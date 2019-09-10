@@ -1,4 +1,6 @@
 var express = require('express');
+var profile = require('./profileRouter')
+
 var app = express();
 app.use(express.urlencoded());
 var hbs = require('hbs');
@@ -15,6 +17,7 @@ mongoClient.connect(url, function (err, client) {
 })
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
+
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/login.html')
 });
@@ -25,6 +28,8 @@ app.get('/home', function (req, res) {
         style: 'home.css'
     })
 });
+
+app.use('/profile', profile)
 
 app.get('/profile', function (req, res) {
     res.render('profile.hbs', {
