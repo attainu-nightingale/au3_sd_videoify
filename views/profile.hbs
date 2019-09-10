@@ -1,222 +1,49 @@
-<div class="container-fluid " style="background-color: #F4FAFF">
+<input id="userName" class="d-none" name="userName" value="{{userName}}">
+
+<div class="container-fluid" style="background-color: #F4FAFF">
     <div class="row">
-        <div class="col-2 pt-5" style="background-color: #EDEDED">
-            <button type="button" class="btn sidebarbtn btn-lg btn-block">Liked Videos</button><br />
-            PLAYLISTS<br />
-            <button type="button" class="btn sidebarbtn btn-lg btn-block">My Playlist</button>
-            <button type="button" class="btn sidebarbtn btn-lg btn-block">Watch Later</button>
-            <button type="button" class="btn sidebarbtn btn-lg btn-block">Favorites</button>
+        <div class="  col-2 pt-3 " style="background-color: #EDEDED;">
+            <button type="button" id="likedVideos" class="btn sidebarbtn btn-lg btn-block mb-3">Liked Videos</button>
+            PLAYLISTS
+            <button type="button" id="myPlaylistVideos" class="btn sidebarbtn btn-lg btn-block">My Playlist</button>
+            <button type="button" id="watchLaterVideos" class="btn sidebarbtn btn-lg btn-block">Watch Later</button>
+            <button type="button" id="favoritesVideos" class="btn sidebarbtn btn-lg btn-block">Favourites</button>
             <div>
                 <div class="card mt-5" style="background-color: #EDEDED">
-                    <img src="../profile.png" class="card-img-top p-3" alt="profille">
+                    <img src="{{profilepic}}" class="card-img-top p-3" alt="profille">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Sagar kumar</h5>
+                        <h5 class="card-title text-center">{{userName}}</h5>
 
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Likes<span class="float-right">29</span></li>
-                        <li class="list-group-item">Playlist <span class="float-right">10</span></li>
+                        <li class="list-group-item">No. of Likes<span id="numOfLikes" class="float-right"></span></li>
+                        <li class="list-group-item">No. of Videos<span id="numOfvideos" class="float-right"></span></li>
                     </ul>
                     <div class="card-body text-center">
-                        <a href="#" class="badge badge-danger p-2 ">Delete Account</a>
+                        <a href="/profile/deleteProfile/{{userName}}" class="badge badge-danger p-2 ">Delete Account</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-10 mt-4">
 
-
+        <div id="clear" class="col-10 mt-2">
 
             <div id="likedv">
-                <div class="m-2"># LIKED VIDEOS</div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
+                <div class="m-2">
+                    <span class="btn btn-info p-1">
+                        Liked Videos <span id="liked" class="badge badge-light"></span>
+                    </span>
                 </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-
 
             </div>
-
+            <hr>
             <div id="watchlv" class="mt-4">
-                <div class="m-2"># WATCH LATER VIDEOS</div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-                <div class="card d-inline-block m-1" style="width: 18rem;">
-                    <img class="card-img-top img-thumbnail" src="../thumbnail.jpg" alt="Card image cap">
-                    <div class="card-body  p-1">
-                        <p class="card-text">this is the title of this video this is the title of this video this is
-                            the
-                            title of this video.</p>
-                    </div>
-                    <div class="card-footer p-0"><a href="#" class="btn btn-sm btn-danger  float-right">remove from
-                            list</a></div>
-                </div>
-
+                <div class="m-2">
+                    <span class="btn btn-info p-1">
+                        Watch Later Videos <span id="watchl" class="badge badge-light"></span>
+                    </span></div>
             </div>
-
         </div>
+
     </div>
+</div>
