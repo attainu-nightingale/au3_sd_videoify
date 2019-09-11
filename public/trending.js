@@ -13,11 +13,8 @@
                 var id=item .id;
 
                 $('#content').append(`
-<<<<<<< HEAD
-                <a href="/individual/video/${id}" style="text-decoration:none">
-=======
                 <a class="text-decoration-none" href="/individual/video/${id}" >
->>>>>>> db5c2d60263486f3ef169f12cefad2d66d670ef8
+
                <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">

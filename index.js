@@ -28,11 +28,8 @@ app.get('/home', function (req, res) {
     res.render('home.hbs', {
         title: 'HOME',
         style: 'home.css',
-<<<<<<< HEAD
         script:"/home.js"
-=======
-        script: "home.js"
->>>>>>> db5c2d60263486f3ef169f12cefad2d66d670ef8
+
     })
 });
 
