@@ -1,17 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var session = require("express-session");
-var MongoClient = require('mongodb').MongoClient;
-
-var url = 'mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
-var db;
-
-MongoClient.connect(url, { useUnifiedTopology: true, useNewUrlParser: true }, function (error, client) {
-    if (error)
-        throw error;
-
-    db = client.db('webTubeDB');
-});
 
 
 var bodyParser = require("body-parser");

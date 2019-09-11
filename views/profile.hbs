@@ -1,0 +1,49 @@
+<input id="userName" class="d-none" name="userName" value="{{userName}}">
+
+<div class="container-fluid" style="background-color: #F4FAFF">
+    <div class="row">
+        <div class="  col-2 pt-3 " style="background-color: #EDEDED;">
+            <button type="button" id="likedVideos" class="btn sidebarbtn btn-lg btn-block mb-3">Liked Videos</button>
+            PLAYLISTS
+            <button type="button" id="myPlaylistVideos" class="btn sidebarbtn btn-lg btn-block">My Playlist</button>
+            <button type="button" id="watchLaterVideos" class="btn sidebarbtn btn-lg btn-block">Watch Later</button>
+            <button type="button" id="favoritesVideos" class="btn sidebarbtn btn-lg btn-block">Favourites</button>
+            <div>
+                <div class="card mt-5" style="background-color: #EDEDED">
+                    <img src="{{profilepic}}" class="card-img-top p-3" alt="profille">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{userName}}</h5>
+
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No. of Likes<span id="numOfLikes" class="float-right"></span></li>
+                        <li class="list-group-item">No. of Videos<span id="numOfvideos" class="float-right"></span></li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a href="/profile/deleteProfile/{{userName}}" class="badge badge-danger p-2 ">Delete Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="clear" class="col-10 mt-2">
+
+            <div id="likedv">
+                <div class="m-2">
+                    <span class="btn btn-info p-1">
+                        Liked Videos <span id="liked" class="badge badge-light"></span>
+                    </span>
+                </div>
+
+            </div>
+            <hr>
+            <div id="watchlv" class="mt-4">
+                <div class="m-2">
+                    <span class="btn btn-info p-1">
+                        Watch Later Videos <span id="watchl" class="badge badge-light"></span>
+                    </span></div>
+            </div>
+        </div>
+
+    </div>
+</div>

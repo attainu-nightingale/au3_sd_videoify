@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +24,8 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "hbs": "^4.0.4",
-    "mongodb": "^3.3.2"
+    "mongodb": "^3.3.2",
+    "npm": "^6.11.3",
+    "unpipe": "^1.0.0"
   }
 }
