@@ -14,7 +14,7 @@ $(".trendbtn").on("click", function () {
                 var id=item .id;
 
                 $('#content').append(`
-                <a href="/individual/video/${id}" >
+                <a href="/individual/video/${id}" style="text-decoration:none">
                <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -25,7 +25,7 @@ $(".trendbtn").on("click", function () {
             <h5 class="card-title" id="title">"${title}"</h5>
             <p class="card-text" id="channel">channel: "${channel}"</p>
             <p class="card-text" id="desc">"${desc}"</p>
-            <p class="card-text"><small class="text-muted" id="view">"${view}"</small></p>
+            <p class="card-text"><small class="text-muted" id="view">view:"${view}"</small></p>
           </div>
         </div>
       </div>
