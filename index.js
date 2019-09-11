@@ -6,7 +6,7 @@ var app = express();
 app.use(express.urlencoded());
 var hbs = require('hbs');
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded());   
 var mongoClient = require('mongodb').MongoClient;
 var url ='mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
 
