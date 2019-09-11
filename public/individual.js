@@ -23,8 +23,8 @@ $.ajax({
    data: "json",
    success: function (data) {
       for (i = 0; i < data.items.length; i++) {
-         $('#div3').append("<div class='card mb-2 p-2 '>" +
-            "<a href='/individual/video/" + data.items[i].id.videoId + "'" + "><img id='img' src=" + data.items[i].snippet.thumbnails.medium.url + " class='card-img img-thumbnail'>" +
+         $('#div3').append("<div class='card mb-2 p-2'>" +
+            "<a href='/individual/video/" + data.items[i].id.videoId + "'" + "><img src=" + data.items[i].snippet.thumbnails.medium.url + " class='card-img img-thumbnail'>" +
             "<div class='card-body p-1 mt-2'> <p class='card-text'>" + data.items[i].snippet.title + "</p></a>" +
             "</div>" +
             "</div>")
