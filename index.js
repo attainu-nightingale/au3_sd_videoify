@@ -28,7 +28,8 @@ app.get('/', function (req, res) {
 app.get('/home', function (req, res) {
     res.render('home.hbs', {
         title: 'HOME',
-        style: 'home.css'
+        style: 'home.css',
+        script:'../home.js'
     })
 });
 
