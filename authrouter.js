@@ -27,6 +27,7 @@ router.get("/forgot", function (req, res) {
 })
 
 router.post("/check", function (req, res) {
+    var db = req.app.locals.db;
     db.collection('loginData').find().toArray(function (error, result) {
         if (error) throw error;
 
@@ -44,6 +45,7 @@ router.post("/check", function (req, res) {
 })
 
 router.post("/checkemail", function (req, res) {
+    var db = req.app.locals.db;
     db.collection('loginData').find().toArray(function (error, result) {
         if (error) throw error;
         var counter;
@@ -75,12 +77,14 @@ router.get("/user", function (req, res) {
 
 
 router.post("/adduser", function (req, res) {
+    var db = req.app.locals.db;
     db.collection('loginData').insertOne(req.body);
     res.send("done");
 })
 
 
 router.post("/validation", function (req, res) {
+    var db = req.app.locals.db;
     db.collection('loginData').find({}).toArray(function (error, result) {
         if (error) throw error;
         var ecounter = 0;

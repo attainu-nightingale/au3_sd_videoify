@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded());
 var mongoClient = require('mongodb').MongoClient;
 var url ='mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
 
-mongoClient.connect(url, function (err, client) {
+mongoClient.connect(url,{ useNewUrlParser: true,useUnifiedTopology: true },function (err, client) {
     if (err)
         throw err;
 app.locals.db = client.db('webTubeDB');

@@ -1,19 +1,9 @@
 var express = require('express');
-
 var router = express.Router();
 var bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded());
-router.use(express.urlencoded());
-var mongoClient = require('mongodb').MongoClient;
-var url ='mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
-
-var db;
-mongoClient.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true }, function (err, client) {
-    if (err)
-        throw err;
-    db = client.db('webTubeDB');
-})
 router.use(express.static('public'));
+
 router.get('/video/:id', function (req, res) {
     // var userName = req.session.userName;
     var videoID = req.params.id;
@@ -38,6 +28,7 @@ router.post('/postComment', function (req, res) {
 
     req.body['dateTime'] = dateTime;
 
+    var db = req.app.locals.db;
     db.collection('comments').insertOne(req.body);
     res.redirect('/individual/video/' + videoID);
 })
@@ -46,6 +37,7 @@ router.post('/postComment', function (req, res) {
 
 router.get('/getComments/:videoId', function (req, res) {
     var videoId = req.params.videoId;
+    var db = req.app.locals.db;
     db.collection('comments').find({ videoId: videoId }).toArray(function (error, result) {
         if (error) throw error
         res.json(result)
@@ -63,6 +55,7 @@ router.post('/addToList', function (req, res) {
 
     req.body['dateTime'] = dateTime;
 
+    var db = req.app.locals.db;
     db.collection('playlists').insertOne(req.body);
     console.log(req.body)
     res.redirect('/individual/video/' + videoID);
@@ -70,6 +63,7 @@ router.post('/addToList', function (req, res) {
 
 router.get('/getLikes/:id', function (req, res) {
     var videoId = req.params.id;
+    var db = req.app.locals.db;
     db.collection('likes').find({ videoId: videoId }).toArray(function (error, result) {
         if (error) throw error
         if (result.length == 0) {
@@ -85,6 +79,7 @@ router.get('/getLikes/:id', function (req, res) {
 router.post('/pushUserName/:userName/:videoId', function (req, res) {
     var userName = req.params.userName;
     var videoId = req.params.videoId;
+    var db = req.app.locals.db;
     db.collection('likes').updateOne({ videoId: videoId }, { $push: { userNames: userName }, $inc: { likes: 1 } }, function (error, result) {
         if (error) throw error
         res.json(result);
