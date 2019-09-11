@@ -44,21 +44,21 @@
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-              <form action="/addToList" method="post">
+              <form action="/individual/addToList" method="post">
                 <input class="d-none" name="videoId" value="{{videoID}}">
                 <input class="d-none" name="userName" value="{{userName}}">
                 <input class="d-none" name="playlistName" value="myPlaylist">
                 <button class="dropdown-item btn" type="submit">My Playlist</button>
               </form>
 
-              <form action="/addToList" method="post">
+              <form action="/individual/addToList" method="post">
                 <input class="d-none" name="videoId" value="{{videoID}}">
                 <input class="d-none" name="userName" value="{{userName}}">
                 <input class="d-none" name="playlistName" value="WatchLater">
                 <button class="dropdown-item btn" type="submit">Watch later</button>
               </form>
 
-              <form action="/addToList" method="post">
+              <form action="/individual/addToList" method="post">
                 <input class="d-none" name="videoId" value="{{videoID}}">
                 <input class="d-none" name="userName" value="{{userName}}">
                 <input class="d-none" name="playlistName" value="favourites">
@@ -89,7 +89,7 @@
           </div>
 
           <div class="col-11">
-            <form action="/postComment" method="post">
+            <form action="/individual/postComment" method="post">
               <div>
                 <input class="d-none" name="videoId" value="{{videoID}}">
                 <input class="d-none" name="userName" value="{{userName}}">
