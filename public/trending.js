@@ -14,7 +14,7 @@ $(".trendbtn").on("click", function () {
                 var id=item .id;
 
                 $('#content').append(`
-                <a href=""/video/:"${id}" >
+                <a href="/individual/video/${id}" >
                <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
