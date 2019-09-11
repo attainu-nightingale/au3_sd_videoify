@@ -1,6 +1,5 @@
-$("#movie").on("click", function () {
     $.ajax({
-        url: 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyBvjnDG4s6YF0AMz21UptFzVTns24JNhtk&part=snippet&q=movies&maxResults=20',
+        url: 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyBvjnDG4s6YF0AMz21UptFzVTns24JNhtk&part=snippet&q=movies&maxResults=30',
         type: 'GET',
         dataType: 'JSON',
         data: "json",
@@ -14,7 +13,7 @@ $("#movie").on("click", function () {
                 var id=item.id.videoId;
 console.log(data);
                 $('#content').append(`
-                <a href=""/video/:"${id}" >
+                <a href="/individual/video/${id}" >
                <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -32,8 +31,7 @@ console.log(data);
     </div>   
     </a>          
              `)
-
+console.log("/video/:"+id);
             })
         }
     });
-});
