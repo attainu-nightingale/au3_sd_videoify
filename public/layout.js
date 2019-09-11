@@ -11,7 +11,7 @@ $('#scrhbtn').on('click', function () {
             success: function (data) {
                 for (var i = 0; i < data.items.length; i++) {
                     $("#bodyContent").append(`<div class="card d-inline-block m-1 ml-1 mt-3 " style="width: 18rem;">
-                <a class="text-decoration-none" href="/individual/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap">
+                <a class="text-decoration-none" href="/individual/video/${data.items[i].id.videoId}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap">
                 <div class="card-body  p-0">
                 <h6 class="card-title text-truncate d-block pl-1 mt-1 ">${data.items[i].snippet.title}</h6>
                 </div></a>
