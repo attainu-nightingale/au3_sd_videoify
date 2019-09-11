@@ -13,7 +13,7 @@
                 var id=item.id.videoId;
 console.log(data);
                 $('#content').append(`
-                <a href="/individual/video/${id}" >
+                <a class="text-decoration-none"  href="/individual/video/${id}" >
                <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
