@@ -14,7 +14,7 @@ $("#movie").on("click", function () {
                 var id=item.id.videoId;
 console.log(data);
                 $('#content').append(`
-                <a href=""/video/:"${id}" >
+                <a href="/individual/video/${id}" >
                <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -32,7 +32,7 @@ console.log(data);
     </div>   
     </a>          
              `)
-
+console.log("/video/:"+id);
             })
         }
     });
