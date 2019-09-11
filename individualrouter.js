@@ -5,13 +5,13 @@ var bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded());
 router.use(express.urlencoded());
 var mongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://127.0.0.1:27017';
+var url ='mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
 
 var db;
-mongoClient.connect(url, function (err, client) {
+mongoClient.connect(url,{ useUnifiedTopology: true,useNewUrlParser: true }, function (err, client) {
     if (err)
         throw err;
-    db = client.db('webtube');
+    db = client.db('webTubeDB');
 })
 router.use(express.static('public'));
 router.get('/video/:id', function (req, res) {

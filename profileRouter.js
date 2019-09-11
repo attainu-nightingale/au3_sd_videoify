@@ -2,13 +2,13 @@ var express = require('express');
 var router = express.Router();
 
 var mongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://127.0.0.1:27017';
+var url ='mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
 
 var db;
 mongoClient.connect(url, function (err, client) {
     if (err)
         throw err;
-    db = client.db('webtube');
+    db = client.db('webTubeDB');
 })
 
 
