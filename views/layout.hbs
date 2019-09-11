@@ -33,10 +33,10 @@
 
             <form class="form-inline">
                 <div class="input-group">
-                    <input id="navBarSearchForm" name="wtb-search" id="wtb-search" class="form-control" type="search" placeholder="Search here..."
+                    <input id="navBarSearchForm" name="wtb-search" class="form-control" type="search" placeholder="Search here..."
                         aria-label="Search here...">
                     <div class="input-group-append">
-                        <button type="submit" class="btn " id="btn1"><img id="searchicon" src="../searchicon.png"
+                        <button type="button" class="btn" id="scrhbtn"><img id="searchicon" src="../searchicon.png"
                                 height="25" width="25"></button>
                     </div>
                 </div>
@@ -50,16 +50,25 @@
 
         <nav id="navbar2" class="navbar justify-content-between ">
             <form class="form-inline">
+<<<<<<< HEAD
                 <button class="btn catbtn" type="button" id="home">HOME</button>
                 <button class="btn ml-3 trendbtn" type="button">TRENDING</button>
                 <button class="btn ml-3 catbtn" type="button" id="movie">MOVIES</button>
+=======
+                <a href="/home"><button class="btn catbtn" type="button">HOME</button></a>
+                <a href="/trending"><button class="btn ml-3 trendbtn" type="button">TRENDING</button></a>
+                <a href="/movies"><button class="btn ml-3 catbtn" type="button" id="movie">MOVIES</button></a>
+>>>>>>> db5c2d60263486f3ef169f12cefad2d66d670ef8
             </form>
             <a href="#" class="badge badge-danger">Sign out</a>
         </nav>
 
     </header>
     <div style="margin-top:115px;"></div>
+    <div id="bodyContent" class="">
     {{{body}}}
+    </div>
+    <script src="layout.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

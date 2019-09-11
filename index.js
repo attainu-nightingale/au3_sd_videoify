@@ -6,15 +6,14 @@ var app = express();
 app.use(express.urlencoded());
 var hbs = require('hbs');
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded());   
 var mongoClient = require('mongodb').MongoClient;
 var url ='mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
 
-var db;
-mongoClient.connect(url, function (err, client) {
+mongoClient.connect(url,{ useNewUrlParser: true,useUnifiedTopology: true },function (err, client) {
     if (err)
         throw err;
-    db = client.db('webTubeDB');
+app.locals.db = client.db('webTubeDB');
 })
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
@@ -29,7 +28,11 @@ app.get('/home', function (req, res) {
     res.render('home.hbs', {
         title: 'HOME',
         style: 'home.css',
+<<<<<<< HEAD
         script:"/home.js"
+=======
+        script: "home.js"
+>>>>>>> db5c2d60263486f3ef169f12cefad2d66d670ef8
     })
 });
 
