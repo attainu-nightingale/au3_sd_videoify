@@ -1,24 +1,23 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <title>{{title}}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-   
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="../{{style}}">
 
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -33,10 +32,10 @@
 
             <form class="form-inline">
                 <div class="input-group">
-                    <input id="navBarSearchForm" name="wtb-search" id="wtb-search" class="form-control" type="search" placeholder="Search here..."
-                        aria-label="Search here...">
+                    <input id="navBarSearchForm" name="wtb-search" class="form-control" type="search"
+                        placeholder="Search here..." aria-label="Search here...">
                     <div class="input-group-append">
-                        <button type="submit" class="btn " id="btn1"><img id="searchicon" src="../searchicon.png"
+                        <button type="button" class="btn" id="scrhbtn"><img id="searchicon" src="../searchicon.png"
                                 height="25" width="25"></button>
                     </div>
                 </div>
@@ -50,7 +49,7 @@
 
         <nav id="navbar2" class="navbar justify-content-between ">
             <form class="form-inline">
-                <button class="btn catbtn" type="button">HOME</button>
+                <a href="/home"><button class="btn catbtn" type="button">HOME</button></a>
                 <a href="/trending"><button class="btn ml-3 trendbtn" type="button">TRENDING</button></a>
                 <a href="/movies"><button class="btn ml-3 catbtn" type="button" id="movie">MOVIES</button></a>
             </form>
@@ -59,16 +58,15 @@
 
     </header>
     <div style="margin-top:115px;"></div>
-    {{{body}}}
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-<script src= {{script}} ></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <div id="bodyContent" class="">
+        {{{body}}}
+    </div>
+    <script src="../layout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src={{script}}></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-</head>
 
 </html>

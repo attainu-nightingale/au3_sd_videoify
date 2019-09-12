@@ -13,7 +13,7 @@
                 var id=item.id.videoId;
 console.log(data);
                 $('#content').append(`
-                <a href="/individual/video/${id}" >
+                <a class="text-decoration-none"  href="/individual/video/${id}" >
                <div class="card mb-3">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -21,9 +21,9 @@ console.log(data);
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title" id="title">"${title}"</h5>
-            <p class="card-text" id="channel">channel: "${channel}"</p>
-            <p class="card-text" id="desc">"${desc}"</p>
+            <h5 class="card-title" id="title">${title}</h5>
+            <p class="card-text text-muted" id="channel">channel :- ${channel}</p>
+            <p class="card-text text-muted" id="desc">${desc}</p>
            
           </div>
         </div>
