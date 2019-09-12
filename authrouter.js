@@ -35,6 +35,8 @@ router.post("/check", function (req, res) {
 
             if (req.body.email == result[i].email && req.body.password == result[i].password) {
                 req.session.loggedIn = true;
+                break;
+
             }
 
         }
@@ -44,32 +46,41 @@ router.post("/check", function (req, res) {
 
 })
 
-router.post("/checkemail", function (req, res) {
+router.post("/checkemailAndAns", function (req, res) {
+    
     var db = req.app.locals.db;
+
     db.collection('loginData').find().toArray(function (error, result) {
         if (error) throw error;
-        var counter;
+        var counter = 0;
+        
         for (var i = 0; i < result.length; i++) {
 
-            if (req.body.email == result[i].email) {
-                counter = 1;
+            if (req.body.email == result[i].email && req.body.securityA == result[i].securityA) {
+                db.collection('loginData').updateOne({email:req.body.email},{$set:{password:req.body.password}})
+                counter++;
+                break;
             }
 
         }
-        if (counter == 1) {
-            res.sendFile(__dirname + "/public/forgot.html")
-        }
-        else {
-            res.send("email address not found");
-        }
+        if(counter==0)
+        res.send(`<h3>Your credential is not correct, please try again... </h3>
+         <p>Go <a href="/authrouter/forgot">back</a></p>`);
+        else
+        res.redirect("/");
+        
+        
+    
+    
 
+})
 
-    })
 })
 
 router.get("/user", function (req, res) {
     if (req.session.loggedIn == true) {
-        res.sendFile(__dirname + "")
+
+        res.redirect("/home")
     } else {
         res.redirect("/");
     }
@@ -119,6 +130,9 @@ router.post("/validation", function (req, res) {
 
 });
 
-
+router.get("/logout", function (req, res) {
+    req.session.destroy();
+    res.redirect("/")
+})
 
 module.exports = router;
