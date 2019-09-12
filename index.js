@@ -3,10 +3,10 @@ var profile = require('./profileRouter');
 var auth= require('./authrouter');
 var individual=require('./individualrouter');
 var app = express();
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 var hbs = require('hbs');
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded());   
+app.use(bodyParser.urlencoded({ extended: true }));   
 var mongoClient = require('mongodb').MongoClient;
 var url ='mongodb+srv://sagar:kumar@cluster0-ralg6.mongodb.net/webTubeDB?retryWrites=true&w=majority';
 

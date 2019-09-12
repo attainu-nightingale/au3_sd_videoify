@@ -6,8 +6,9 @@ var session = require("express-session");
 var bodyParser = require("body-parser");
 router.use(
     session({
-        secret: "express session secret"
-
+        secret: "express session secret",
+        resave: true,
+        saveUninitialized: true
     })
 );
 
