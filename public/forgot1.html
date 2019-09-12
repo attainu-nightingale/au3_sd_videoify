@@ -9,18 +9,33 @@
 </head>
 
 <body class="text-center">
-    <form action="/authrouter/checkemail" method="POST" class="form-signin border rounded">
+    <form action="/authrouter/checkemailAndAns" method="POST" class="form-signin border rounded">
         <img class="mb-4" src="./webtube logo.png" alt="" width="100" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Password Reset</h1>
         <div>
-            <label for="" class="sr-only">Enter Email</label>
-            <input type="email" id="email" name="email" class="form-control rounded-pill" placeholder="Email" required autofocus>
+            <label for="email" class="sr-only">Enter Email</label>
+            <input type="email" id="email" name="email" class="form-control rounded-pill" placeholder="Email" required
+                autofocus>
         </div>
         <div>
-            <button class="btn btn-lg btn-primary btn-block rounded-pill" style="background-color: #5cb85c;font-family: Oswald" type="submit">Submit</button>
+            <label for="securityA" class="sr-only">Enter your Answer</label>
+            <input type="text" id="securityA" name="securityA" class="form-control rounded-pill"
+                placeholder="Enter your Answer" required autofocus>
         </div>
-        <span>Back to <a href="/">Home</a></span>
+        <div>
+                <label for="password" class="sr-only">Enter your Answer</label>
+                <input type="password" id="password" name="password" class="form-control rounded-pill"
+                    placeholder="Password" required autofocus>
+            </div>
+        <div>
+            <button class="btn btn-lg btn-primary btn-block rounded-pill"
+                style="background-color: #5cb85c;font-family: Oswald" id="btncheck" type="submit" value="submit">Submit</button>
+        </div>
+        <span>Back to <a href="/">Login</a></span>
     </form>
+
+    
 </body>
+
 
 </html>

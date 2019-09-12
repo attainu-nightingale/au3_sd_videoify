@@ -22,23 +22,25 @@
                     required autofocus>
             </div>
         </div>
-        <div>
-            <select class="form-control rounded-pill" name="gender" id="gender">
-                <option>Choose Gender...</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-            </select>
+        <div class="form-row">
+            <div class="col">
+                <select class="form-control rounded-pill" name="gender" id="gender">
+                    <option>Choose Gender...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="uname" class="sr-only">User Name</label>
+                <input type="text" id="uname" name="username" class="form-control rounded-pill" placeholder="User name"
+                    required autofocus>
+            </div>
         </div>
         <div>
             <label for="email" class="sr-only">Email</label>
             <input type="email" id="email" name="email" class="form-control rounded-pill" placeholder="Email" required
                 autofocus>
-        </div>
-        <div>
-            <label for="uname" class="sr-only">User Name</label>
-            <input type="text" id="uname" name="username" class="form-control rounded-pill" placeholder="User name"
-                required autofocus>
         </div>
         <div class="form-row">
             <div class="col">
@@ -66,7 +68,7 @@
             <button class="btn btn-lg btn-primary btn-block rounded-pill" id="btn"
                 style="background-color: #5cb85c;font-family: Oswald" type="button" >Sign Up</button>
         </div>
-        <span>Back to <a href="/">Home</a></span>
+        <span>Back to <a href="/">Login</a></span>
     </form>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
