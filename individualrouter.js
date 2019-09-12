@@ -57,7 +57,6 @@ router.post('/addToList', function (req, res) {
 
     var db = req.app.locals.db;
     db.collection('playlists').insertOne(req.body);
-    console.log(req.body)
     res.redirect('/individual/video/' + videoID);
 })
 

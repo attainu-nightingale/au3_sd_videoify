@@ -2,7 +2,9 @@ $("#btn").on("click", function () {
     var password1 = $("#password1").val();
     var password2 = $("#password2").val();
     var securityA = $("#qn").val();
-     var securityQ = $("#ans").val();
+    var securityQ = $("#ans").val();
+    var uName = $("#uname").val();
+    var Gender = $("#gender").val();
     var data = {
         email: $("#email").val(),
         username: $("#uname").val()
@@ -13,29 +15,36 @@ $("#btn").on("click", function () {
     else if (password1.length < 8) {
         alert("password should be of minimum 8 character");
     }
-    else if(securityA == "" && securityQ == ""){
+    else if (securityA == "" && securityQ == "") {
         alert("please fill the security question and answer field")
     }
+    else if (uName == "") {
+        alert("please fill the UserName field")
+    }
+    else if (Gender == "Choose Gender...") {
+        alert("please choose any Gender")
+    }
+
     
     else {
 
-  
+
         $.ajax({
             type: "POST",
             url: "/authrouter/validation",
             data: data,
             dataType: "JSON",
             success: function (data) {
-                if(data == "11"){
+                if (data == "11") {
                     alert("userrname and email already exists")
                 }
-                else if(data == "5"){
+                else if (data == "5") {
                     alert(" email already exists")
                 }
-                else if(data == "4"){
+                else if (data == "4") {
                     alert(" username already exists")
                 }
-                else{
+                else {
                     var signup = {
                         firstName: $("#fname").val(),
                         lastName: $("#lname").val(),
@@ -46,18 +55,18 @@ $("#btn").on("click", function () {
                         securityQ: $("#qn").val(),
                         securityA: $("#ans").val()
                     }
-                  
+
                     $.ajax({
                         type: "POST",
                         url: "/authrouter/adduser",
                         data: signup,
                         dataType: "JSON",
                         success: function (data) {
-                            
-                            }
-                            
-                        })
-                        window.location.replace("/")
+
+                        }
+
+                    })
+                    window.location.replace("/")
                 }
             }
         });

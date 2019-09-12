@@ -35,8 +35,8 @@ router.post("/check", function (req, res) {
 
             if (req.body.email == result[i].email && req.body.password == result[i].password) {
                 req.session.loggedIn = true;
+                req.session.userName = result[i].userName; 
                 break;
-
             }
 
         }
