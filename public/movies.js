@@ -14,7 +14,7 @@
 console.log(data);
                 $('#content').append(`
                 <a class="text-decoration-none"  href="/individual/video/${id}" >
-               <div class="card mb-3">
+               <div class="card mb-3 bg-light">
       <div class="row no-gutters">
         <div class="col-md-4">
           <img src="${thumb}" class="card-img" alt="..." href="/video/:"${id}"">

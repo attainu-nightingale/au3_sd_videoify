@@ -29,13 +29,13 @@ $.ajax({
             success: function (data) {
                 for (var i = 0; i < data.items.length; i++) {
                     $("#likedv").append(`<div class="card d-inline-block m-1 " style="width: 18rem;">
-                    <a href="/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
+                    <a href="individual/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
                     <div class="card-body  p-1">
                         <small class="card-text"></small> 
                         
                     </div>
                     <div class="card-footer p-1">${data.items[i].snippet.channelTitle}
-                    <form action="/profile/popUserName/${user_Name}/${data.items[i].id}" method="post"><button type="submit" class="btn btn-sm btn-danger  float-right">remove from
+                    <form action="/profile/popUserName/${user_Name}/${data.items[i].id}" method="post"><button type="submit" class="btn btn-sm btn-danger p-0 pl-1 pr-1 float-right">remove from
                             list</button></form></div>
                 </div>`)
                 }
@@ -74,13 +74,13 @@ $.ajax({
             success: function (data) {
                 for (var i = 0; i < data.items.length; i++) {
                     $("#watchlv").append(`<div class="card d-inline-block m-1 " style="width: 18rem;">
-                    <a href="/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
+                    <a href="individual/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
                     <div class="card-body  p-1">
                         <small class="card-text"></small> 
                         
                     </div>
                     <div class="card-footer p-1">${data.items[i].snippet.channelTitle}
-                    <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/WatchLater" method="post"><button type="submit" class="btn btn-sm btn-danger  float-right">remove from
+                    <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/WatchLater" method="post"><button type="submit" class="btn btn-sm btn-danger p-0 pl-1 pr-1 float-right">remove from
                             list</button></form></div>
                 </div>`)
                 }
@@ -125,13 +125,13 @@ $('#likedVideos').on('click', function () {
                 success: function (data) {
                     for (var i = 0; i < data.items.length; i++) {
                         $("#clear").append(`<div class="card d-inline-block m-1 " style="width: 18rem;">
-                        <a href="/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
+                        <a href="individual/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
                         <div class="card-body  p-1">
                             <small class="card-text"></small> 
                             
                         </div>
                         <div class="card-footer p-1">${data.items[i].snippet.channelTitle}
-                        <form action="/profile/popUserName/${user_Name}/${data.items[i].id}" method="post"><button type="submit" class="btn btn-sm btn-danger  float-right">remove from
+                        <form action="/profile/popUserName/${user_Name}/${data.items[i].id}" method="post"><button type="submit" class="btn btn-sm btn-danger p-0 pl-1 pr-1 float-right">remove from
                                 list</button></form></div>
                     </div>`)
                     }
@@ -180,13 +180,13 @@ $('#myPlaylistVideos').on('click', function () {
                 success: function (data) {
                     for (var i = 0; i < data.items.length; i++) {
                         $("#clear").append(`<div class="card d-inline-block m-1 " style="width: 18rem;">
-                        <a href="/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
+                        <a href="individual/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
                          <div class="card-body  p-1">
                              <small class="card-text"></small> 
                              
                          </div>
                          <div class="card-footer p-1">${data.items[i].snippet.channelTitle}
-                         <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/myPlaylist" method="post"><button type="submit" class="btn btn-sm btn-danger  float-right">remove from
+                         <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/myPlaylist" method="post"><button type="submit" class="btn btn-sm btn-danger p-0 pl-1 pr-1 float-right">remove from
                                  list</button></form></div>
                      </div>`)
                     }
@@ -235,13 +235,13 @@ $('#watchLaterVideos').on('click', function () {
                 success: function (data) {
                     for (var i = 0; i < data.items.length; i++) {
                         $("#clear").append(`<div class="card d-inline-block m-1 " style="width: 18rem;">
-                        <a href="/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
+                        <a href="individual/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
                         <div class="card-body  p-1">
                             <small class="card-text"></small> 
                             
                         </div>
                         <div class="card-footer p-1">${data.items[i].snippet.channelTitle}
-                        <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/WatchLater" method="post"><button type="submit" class="btn btn-sm btn-danger  float-right">remove from
+                        <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/WatchLater" method="post"><button type="submit" class="btn btn-sm btn-danger p-0 pl-1 pr-1 float-right">remove from
                                 list</button></form></div>
                     </div>`)
                     }
@@ -290,13 +290,13 @@ $('#favoritesVideos').on('click', function () {
                 success: function (data) {
                     for (var i = 0; i < data.items.length; i++) {
                         $("#clear").append(`<div class="card d-inline-block m-1 " style="width: 18rem;">
-                        <a href="/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
+                        <a href="individual/video/${data.items[i].id}"><img class="card-img-top img-thumbnail" src="${data.items[i].snippet.thumbnails.high.url}" alt="Card image cap"></a>
                          <div class="card-body  p-1">
                              <small class="card-text"></small> 
                              
                          </div>
                          <div class="card-footer p-1">${data.items[i].snippet.channelTitle}
-                         <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/favourites" method="post"><button type="submit" class="btn btn-sm btn-danger  float-right">remove from
+                         <form action="profile/removeFromList/${user_Name}/${data.items[i].id}/favourites" method="post"><button type="submit" class="btn btn-sm btn-danger p-0 pl-1 pr-1 float-right">remove from
                                  list</button></form></div>
                      </div>`)
                     }
