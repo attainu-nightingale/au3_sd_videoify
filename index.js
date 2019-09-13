@@ -21,7 +21,7 @@ app.use(express.static('public'));
 app.use(
     session({
         secret: "express session secret",
-        start : "node index.js"
+       
 
     })
 );
